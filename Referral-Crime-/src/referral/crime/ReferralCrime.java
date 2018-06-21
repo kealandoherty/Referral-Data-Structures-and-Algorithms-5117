@@ -13,28 +13,54 @@ public class ReferralCrime {
             
             
             int choice = 0 ; 
-            while (choice !=7) {
+            while (choice !=6) {
         
         
          System.out.println("--   Menu   --");
             System.out.println(" ");
             System.out.println("1 - Crime Types ");
             System.out.println("2 - Details of the crimes ");
-            System.out.println("3 - Crimes - Under Investigation ");
-            System.out.println("4 - Crimes - Investigation Complete ");
-            System.out.println("5 - Highest Average total crime frequency ");
-            System.out.println("6 - Highest Average unresolved crime frequency ");
-            System.out.println("7 - Highest Crime frequency for a user-specified crime type ");
+            System.out.println("3 - Crimes - Under Investigation Or Investigation Complete ");
+            System.out.println("4 - Highest Average total crime frequency ");
+            System.out.println("5 - Highest Average unresolved crime frequency ");
+            System.out.println("6 - Highest Crime frequency for a user-specified crime type ");
             System.out.println(" ");
             System.out.println("Select Number : ");
            choice = S.nextInt();
+           
+              switch (choice) {
+                case 1:
+                    {
             
-            }
+                    }
+                break;
+			
+		case 2 : 
+                        {
+					
+                        }
+		break;
+			
+		case 3 : 
+                        {
+					
+                        }
+                break;
+                
+                case 4 : 
+                        {
+		
+			}
+                break;
+              
+                case 5 : 
+                        {
+				
+                        }
+            break;
             
             
-            
-            
-            
+              }
             S.close();
             
             //crime types 
@@ -52,9 +78,11 @@ public class ReferralCrime {
             
             
             
-                }  
+              }
+            }
+    }
+
 
    
-        }
-    
-
+        
+        
