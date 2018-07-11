@@ -9,7 +9,7 @@ public class ReferralCrime {
    
     public static void main(String[] args) throws IOException{
             
-            ScanData.scanAllData();
+          //  ScanData.scanAllData();
             
             
             int choice = 0 ; 
@@ -26,13 +26,13 @@ public class ReferralCrime {
             System.out.println("6 - Highest Crime frequency for a user-specified crime type ");
             System.out.println(" ");
             System.out.println("Select Number : ");
-           choice = S.nextInt();
+            choice = S.nextInt();
            
               switch (choice) {
                 case 1:
                     {
-            
-                    }
+                        Calcs.getCrimeType(Crimetype());
+                                }
                 break;
 			
 		case 2 : 
@@ -58,11 +58,19 @@ public class ReferralCrime {
 				
                         }
             break;
-            
+                case 6:   {
+		
+			}
+                break;
             
               }
-            S.close();
             
+              S.close();
+            
+          
+          
+          
+          
             //crime types 
            
             //dkisplay all crimes across all LSOAs
@@ -74,12 +82,17 @@ public class ReferralCrime {
             // LSOA with the highest average unresolved crimed frequency 
             
             // LSOA with the highesst crime frequency for a user-specified crime type 
-            
-            
-            
+ 
             
               }
             }
+
+//    private static void getCrimeType() {
+//        
+//        
+//        
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
     }
 
 
