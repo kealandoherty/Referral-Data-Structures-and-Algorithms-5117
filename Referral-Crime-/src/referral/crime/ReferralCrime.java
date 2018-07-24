@@ -1,10 +1,15 @@
 package referral.crime;
 
+import classes.Crime;
+import classes.Location;
  import java.io.*;
  import java.util.Scanner;
+ import referral.crime.ScanCSV;
+
 
 public class ReferralCrime {
     public static void main(String[] args) throws IOException{
+            ScanCSV.readData();
             
          System.out.println("--   Menu   --");
             System.out.println(" ");
@@ -22,35 +27,35 @@ public class ReferralCrime {
                switch (choice) {
                 case 1:
                     {
-                      CrimeType();
+                      ScanCSV.printAllCrimeTypes();
                                 }
                 break;
 			
 		case 2 : 
                         {
-			CrimeDetails();		
+			//CrimeDetails();		
                                 }
 		break;
 			
 		case 3 : 
                         {
-			CrimeStatus();		
+			//CrimeStatus();		
                         }
                 break;
                 
                 case 4 : 
                         {
-                        CrimeFreq();
+                       // CrimeFreq();
 			}
                 break;
               
                 case 5 : 
                         {
-			UnresolvedCrime();	
+			//UnresolvedCrime();	
                         }
             break;
                 case 6:   {
-                        CrimeFreqUserSpecified();
+                       // CrimeFreqUserSpecified();
 			}
                 break;
             
@@ -62,15 +67,15 @@ public class ReferralCrime {
     //crime types 
           private static void CrimeType()
           {
-              
-             System.out.println("What Crime are you looking for");
-              
-             Scanner S1 = new Scanner(System.in);
-             String UserCrimeType = S1.nextLine();
+              ScanCSV.locationList.forEach((location) -> {
+                  location.getCrimeList().forEach((crime) -> {
+                      System.out.println(crime.getCrimeType());
+                  });
+        });      
+        
+} 
               
              
-              
-          }   
         //dkisplay all crimes across all LSOAs     
           private static void CrimeDetails()
                   {
@@ -84,8 +89,8 @@ public class ReferralCrime {
                   {
                   System.out.println("Are you looking for crimes that are underinvestigation or are complete? ");
                   
-                  Scanner S3 = new Scanner(System.in);
-                  String CStat = S3.nextLine();
+//                  Scanner S3 = new Scanner(System.in);
+//                  String CStat = S3.nextLine();
                   
                   
                   }
@@ -107,36 +112,7 @@ public class ReferralCrime {
            private static void CrimeFreqUserSpecified()
            {
                 System.out.println("LSOA with the highest crime rate for the crime type specified is: ");
-           }
+           }       
 
+}  
     
-
-          
-            
-           
-            
-            
-            
-            
-            
-            
-            
-            
-           
- 
-            
-              
-            
-}
-//    private static void getCrimeType() {
-//        
-//        
-//        
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-   
-
-
-   
-        
-        
