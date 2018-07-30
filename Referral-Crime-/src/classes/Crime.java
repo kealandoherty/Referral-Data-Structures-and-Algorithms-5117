@@ -1,9 +1,6 @@
 package classes;
 
-
 public class Crime {
-        
-       
 
 	private String crimeId;
 	private String month;
@@ -17,8 +14,6 @@ public class Crime {
 	private String crimeType;
 	private String lastOutcome;
 	private String context;
-	
-	
 	
 	public Crime(String fileString){
 		String[] split  = fileString.split(",", -1);
@@ -48,6 +43,7 @@ public class Crime {
                 setFallsWithin(fallsWithin);
 		setLongitude(longitude);
 		setLatitude(latitude);
+                setLsoaName(lsoaName);
 		setLsoaCode(lsoaCode);
 		setCrimeType(crimeType);
 		setLastOutcome(lastOutcome);
@@ -149,4 +145,8 @@ public class Crime {
 	public void setContext(String context) {
 		this.context = context;
 	}
+        
+	public String toString() {
+                  return this.crimeId + "\t"  + this.month + "\t" + this.reported  + "\t" + this.fallsWithin + "\t" + this.longitude + "\t" + this.latitude + "\t" + this.location + "\t" + this.lsoaName + "\t" + this.lsoaCode + "\t" + this.crimeType + "\t" + this.lastOutcome + "\t" + this.context;
+                }
 }

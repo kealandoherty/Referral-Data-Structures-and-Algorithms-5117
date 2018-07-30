@@ -3,8 +3,7 @@ package classes;
 import java.util.ArrayList;
 
 public class Location {
-    
-
+   
 	private ArrayList<Crime> crimeList = new ArrayList<Crime>();
 	
 	private String locationName;
@@ -29,9 +28,5 @@ public class Location {
 
 	public void setLocationName(String locationName) {
 		this.locationName = locationName;
-	}
-	
-        
-        
-        
+        }       
 }
