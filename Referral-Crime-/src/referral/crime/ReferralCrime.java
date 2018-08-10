@@ -9,7 +9,7 @@ import referral.crime.ScanCSV;
 public class ReferralCrime {
     public static void main(String[] args) throws IOException{
             ScanCSV.readData();
-            
+            // Menu so the user can navigate through the program 
          System.out.println("--   Menu   --");
             System.out.println(" ");
             System.out.println("1 - Crime Types ");
@@ -34,20 +34,18 @@ public class ReferralCrime {
                         {
                             //Prints out the different crime types that we have for them to choose out of 
                          ScanCSV.printAllCrimeDetails();
-                       
-                          
-			//CrimeDetails();		
+                       		
                                 }
 		break;
 			
 		case 3 : 
                         {
-                        ScanCSV.printCrimeStatus();
+                        ScanCSV.printCrimeStatus(); // prints out the method that shows the user the different crime status'
                 }
                         break;
                 case 4 : 
                         {
-                       ScanCSV.printHighestCrimeFreq();
+                       ScanCSV.printHighestCrimeFreq(); //prints out the highest crime frequency lsoa code and number of times crime happens
                        
 			}
                 break;

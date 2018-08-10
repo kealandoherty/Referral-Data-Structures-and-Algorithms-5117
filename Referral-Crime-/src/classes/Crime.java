@@ -2,6 +2,10 @@ package classes;
 
 public class Crime {
 
+    public static boolean getCrimeType(Crime lsoaName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 	private String crimeId;
 	private String month;
 	private String reported;
